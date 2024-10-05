@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Daftar Tugas</h1>
+<ul>
+    {% for task in tasks %}
+    <li>
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+        <p>Jatuh Tempo: {{ task.due_date.strftime('%Y-%m-%d %H:%M') }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

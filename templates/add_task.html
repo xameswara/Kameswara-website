@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tambah Tugas Baru</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.title.label }}
+        {{ form.title() }}
+    </div>
+    <div>
+        {{ form.description.label }}
+        {{ form.description() }}
+    </div>
+    <div>
+        {{ form.due_date.label }}
+        {{ form.due_date() }}
+    </div>
+    <button type="submit">Tambah Tugas</button>
+</form>
+{% endblock %}
